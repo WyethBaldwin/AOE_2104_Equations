@@ -1,0 +1,12 @@
+%Steady flow with no mass accumulation in the stream tube
+%P1 = 0; %pressure at start
+P2 = 0; %pressure at end
+A1 = 0; %area at start
+A2 = 0; %area at end
+V1 = 0; %velocity at start
+V2 = 0; %velocity at end
+syms P1 real
+eq1 = P1*A1*V1 == P2*A2*V2;
+sol1 = solve(eq1,P, 'Real',true); %Solving for Pressure
+P = double(sol1);
+disp(P)
