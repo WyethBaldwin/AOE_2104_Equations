@@ -1,0 +1,11 @@
+%Bernoulli's Equation (Incompressible, Inviscid)
+%P2 = 0; %pressure at point
+P1 = 0; %pressure at start
+rho = 0; % density stays same
+V1 = 0; %Velocity at start
+V2 = 0; %Velocity at point
+syms P2 real
+eq1 = P2+rho*((V2^2)/2) == P1+rho*((V1^2)/2);
+sol1 = solve(eq1,P2, 'Real',true); %Solving for Pressure
+P2 = double(sol1);
+disp(P2)
