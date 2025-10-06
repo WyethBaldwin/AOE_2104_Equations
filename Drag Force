@@ -1,0 +1,15 @@
+Drag Force
+% Description: Calculates drag using CD, q, and S.
+% Variables:
+%   CD  - coefficient of drag [-]
+%   q   - dynamic pressure [Pa]
+%   S   - wing area [m^2]
+
+CD = 0.03;
+q = 0;
+S = 0;
+syms D real
+eqD = D == CD * q * S;
+sol_D = solve(eqD, D, 'Real', true);
+Drag = double(sol_D);
+fprintf('Drag = %.3f N\n', Drag);
