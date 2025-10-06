@@ -1,0 +1,8 @@
+%Total Skin Friction Drag Laminar
+Df = 0; % Total Drag force
+Re = 0; % Reynolds Number
+syms Cd real
+eq1 = Cd == (1.328)/sqrt(Re);
+sol1 = solve(eq1,Cd, 'Real',true); %Solving Coefficent of Skin Friction Drag
+Cd = double(sol1);
+disp(Cd)
