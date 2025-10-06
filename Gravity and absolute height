@@ -1,0 +1,12 @@
+% h is geopotential height. Fake alt that lets us use g0 isntead of g
+% h = r/(r+hg)
+g0 = 9.8; %gravity at sea level. Will change
+r = 32; %radius of earth
+ha = hg + r; %absolute height
+eq = hg==g0*(r/ha)^2; %equation for gravity at absolute height ha.
+
+syms g real%change this value
+
+sol = solve(eq,g);
+
+solution = double()
