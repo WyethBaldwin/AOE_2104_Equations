@@ -1,0 +1,8 @@
+%Laminar Boundary Layer Thickness
+x = 0; %distance from leading edge (m)
+Re = 0; %Reynolds Numbers
+syms pd real
+eq1 = pd == (5.2*x)/sqrt(Re);
+sol1 = solve(eq1,pd, 'Real',true); %Solving laminar boundary thickness
+Pd = double(sol1);
+disp(Pd)
