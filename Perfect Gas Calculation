@@ -5,5 +5,5 @@ T = 0; %Kelvin (K = C+273.15)(C = 5/9F-32)
 syms P real
 eq1 = P == DRT;
 sol1 = solve(eq1,P, 'Real',true); %Solving for Pressure
-P = double(sol1(2));
+P = double(sol1);
 disp(P)
