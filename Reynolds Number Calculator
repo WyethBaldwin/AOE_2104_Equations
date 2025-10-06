@@ -1,0 +1,10 @@
+%Reynolds number
+rho = 0; %free stream density kg/m^3
+mu = 0; % free stream dynamic viscosity for air 1.8*10^-5
+V = 0; %free stream velocity m/s
+x = 0; %distance from leading edge in meters
+syms Re real
+eq1 = Re == (rho*V*x)/mu;
+sol1 = solve(eq1,Re, 'Real',true); %Solving for Reynolds number
+Re = double(sol1);
+disp(Re)
