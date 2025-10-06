@@ -1,0 +1,16 @@
+%Isothermal - constant tempurature
+%variation with d
+d = 1; %Density
+d1 = 1; %desnity base of isothermal region
+e = exp(1);
+g0 = 0; %gravity at sea level probably
+R = 1; %Specific gas cosntant
+h = 1; %current height
+h1 = 1; %Base height
+
+
+eq = d/d1 == e^(-(g0/(R*T))*(h-h1));
+
+syms h real
+
+solve(eq,h)
