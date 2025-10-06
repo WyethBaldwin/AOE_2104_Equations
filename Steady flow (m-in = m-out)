@@ -1,6 +1,6 @@
 %Steady flow with no mass accumulation in the stream tube
-%D1 = 0; %pressure at start
-D2 = 0; %pressure at end
+%D1 = 0; %pressure at start (stays same as D2 if incompressible)
+D2 = 0; %pressure at end (stays same as D1 if incompressible)
 A1 = 0; %area at start
 A2 = 0; %area at end
 V1 = 0; %velocity at start
