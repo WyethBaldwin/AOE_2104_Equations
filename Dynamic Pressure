@@ -1,0 +1,8 @@
+%Dynamic Pressure
+rho = 0; %free stream density
+V = 0; %free stream velocity
+syms q real
+eq1 = q == 0.5*rho*(V2^2);
+sol1 = solve(eq1,q, 'Real',true); %Solving for dynamic pressure
+q = double(sol1);
+disp(q)
